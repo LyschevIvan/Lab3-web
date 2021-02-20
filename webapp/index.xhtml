@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous"/>
+        <title>Welcome Page</title>
+    </h:head>
+
+    <h:body styleClass="d-flex flex-column min-vh-100">
+        <div class="header text-right">
+            <h1>Лыщев Иван Антонович P3210 10791</h1>
+            
+        </div>
+        <div class="container text-center h-90">
+            <div class="row ">
+                <h2 class="col-12 text-center">Время: <span id="time"/></h2>
+                <div class="col-3 mx-auto" style="width: 200px">
+                    <h:form>
+                        <h:commandButton styleClass="btn btn-lg btn-outline-dark btn-block" value="Вход" action="#{Record.redirect}"/>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-auto text-center" >
+            <h5>Itmo 2021</h5>
+        </div>
+
+        <script type="text/javascript">
+            function update() {
+              let time = new Date();
+              document.getElementById("time").innerHTML = ' '+time.toLocaleTimeString();
+            }
+            update();
+            setInterval(update,9000);
+        </script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"/>
+        <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"/>
+
+    </h:body>
+
+</html>
